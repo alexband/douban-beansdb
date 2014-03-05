@@ -1,2 +1,4 @@
-Cython
--e git+http://code.dapps.douban.com/python-libmemcached.git#egg=cmemcached
+setuptools==2.2
+-e git+https://github.com/douban/douban-utils.git@5ca697545da191dab3fbe308e6b6776d8da83bd5#egg=DoubanUtils
+-e git+https://github.com/douban/python-libmemcached.git@71fb66d473bbab82c2b6ddb410a386dd84417fa3#egg=python_libmemcached
+-e git+https://github.com/douban/douban-mc.git@f594ab28af464f25a54263d1cc312e895e65b1f4#egg=DoubanMC

@@ -8,7 +8,7 @@ DESCRIPTION = "Douban BeansDB"
 AUTHOR = "Qiangning Hong"
 AUTHOR_EMAIL = "hongqn@gmail.com"
 LICENSE = "revised BSD"
-URL = "https://github.com/douban/douban-beansdb-client"
+URL = "https://github.com/alexband/douban-beansdb"
 KEYWORDS = ""
 CLASSIFIERS = []
 
@@ -52,15 +52,8 @@ setup(
     zip_safe=False,
     entry_points=ENTRY_POINTS,
     install_requires=[
-        'Cython',
-        'python_libmemcached',
-        'DoubanUtils',
-        'DoubanMC',
     ],
     dependency_links=[
-        'http://github.com/douban/python-libmemcached/archive/master.zip#egg=python_libmemcached',
-        'http://github.com/douban/douban-utils/archive/master.zip#egg=DoubanUtils',
-        'http://github.com/douban/douban-mc/archive/master.zip#egg=DoubanMC',
     ],
     tests_require=TESTS_REQUIRE,
     test_suite=TEST_SUITE,
