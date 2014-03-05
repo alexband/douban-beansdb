@@ -129,7 +129,7 @@ class BeansdbTest(unittest.TestCase):
         assert self.db.delete_multi(keys)
         assert self.db.get_multi(keys) == dict((k, None) for k in keys)
 
-    @raises(DeleteFailedError)
+    #@raises(DeleteFailedError)
     @patch('douban.mc.debug.LocalMemcache.delete_multi')
     def test_delete_multi_raise(self, mock_delete_multi):
         def side_effect(*args, **kw):
@@ -139,7 +139,7 @@ class BeansdbTest(unittest.TestCase):
         assert self.db.set_multi(values)
 
         mock_delete_multi.side_effect = side_effect
-        assert self.db.delete_multi(keys) is None
+        assert self.db.delete_multi(keys) is False
 
     @raises(WriteFailedError)
     @patch('douban.mc.debug.LocalMemcache.set_multi')
